@@ -118,7 +118,7 @@ app.post("/contact-details", (req, res) => {
       Inquiry: ${additionalInfo}`
     }
     transporter.sendMail(mailOptions);
-    res.redirect("/");
+    res.redirect("index.html");
   }
   catch (error) {
     console.error(`Error sending email: ${error}`);
