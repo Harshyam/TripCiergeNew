@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: url('./images/globe_page/globeBgImg.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 120%;
+            flex-direction: column;
+        }
+
+        .row {
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .destination-heading {
+            margin: 0;
+            color: #fff;
+        }
+
+        .back-button {
+            padding: 1px 18px;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border-radius: 25px;
+            border: 2px solid #9c9c9c40;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(3px);
+            background-color: transparent;
+        }
+
+        .back-button:hover {
+            backdrop-filter: blur(8px);
+            background-color: #f1f1f120;
+        }
+
+        model-viewer {
+            margin: 0 2%;
+            width: 96%;
+            height: 43%;
+            background-color: transparent;
+        }
+
+        .country-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            height: 04%;
+            overflow-x: auto;
+            margin: 0 0px;
+            padding: 0 10px;
+            box-sizing: border-box;
+         
+        }
+
+        .country-list h2 {
+            margin-left: 6px;
+            font-size: 33px;
+            color: #fff;
+        }
+
+        .country-list ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .country-list li {
+            flex: 0 0 auto;
+            padding: 0 15px;
+            line-height: 3.8rem;
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            font-family: 'Verdana', sans-serif;
+            text-transform: capitalize;
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        .country-list li:hover {
+            border-radius: 0px 15px 15px 0;
+            background: linear-gradient(90deg, #F4b400, #643600);
+            background-size: 400% 400%;
+            animation: backgroundMove 7s infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+       
+        /* Right side column content */
+        .column-explore {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 0%;
+            visibility: hidden;
+            /* Initially hidden */
+        }
+
+        .row-explore-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .row-explore {
+            flex: 1;
+            margin-left: 10%;
+        }
+
+        .row-explore-heading {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .row-explore-description {
+            color: #ddd;
+            font-size: 18px;
+            max-width: 70%;
+        }
+
+        .row-explore-brief {
+            color: #aaa;
+            font-size: 16px;
+            max-width: 100%;
+            text-align: center;
+            margin-top: 5px;
+            text-align: start;
+        }
+
+        .continent-map {
+            width: 30%;
+            height: auto;
+            margin-right: 10%;
+        }
+
+        .nextbutton {
+            margin-top: 28px;
+            margin-left: 8%;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            font-size: 20px;
+            letter-spacing: 2px;
+            border-radius: 25px;
+            border: 2px solid #9c9c9c40;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(3px);
+            background-color: transparent;
+        }
+
+        .nextbutton:hover {
+            backdrop-filter: blur(8px);
+            background-color: #f1f1f120;
+        }
+
+
+
+
+
+
+        /* Loader styles */
+        .loader {
+            position: fixed;
+            top: 30%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            border: 12px solid #f3f3f3;
+            border-top: 12px solid #6e6a6a;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+            z-index: 10;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <div class="container">
+        <div class="row">
+            <button class="back-button" style="font-size: 30px;">←</button>
+            <h2 class="destination-heading">Where to Fly?</h2>
+        </div>
+
+        <model-viewer id="globe" src="./3dModel/earth_globe4mb.glb" alt="Earth 3D model" 
+                    scale="1 1 1"
+                    shadow-intensity=".5" 
+                    field-of-view="09.0deg" 
+                    min-camera-orbit="auto -390deg"
+                    max-camera-orbit="auto 390deg" 
+                    interpolation-decay="300">
+        </model-viewer>
+
+        <div class="country-list">
+            <ul>
+                <li onclick="rotateGlobeToContinent('Asia')">Asia</li>
+                <li onclick="rotateGlobeToContinent('Africa')">Africa</li>
+                <li onclick="rotateGlobeToContinent('North America')">North America</li>
+                <li onclick="rotateGlobeToContinent('South America')">South America</li>
+                <li onclick="rotateGlobeToContinent('Antarctica')">Antarctica</li>
+                <li onclick="rotateGlobeToContinent('Europe')">Europe</li>
+                <li onclick="rotateGlobeToContinent('Australia')">Australia</li>
+            </ul>
+           
+        </div>
+
+        <!-- Right side column content -->
+        <div class="column-explore">
+            <div class="row-explore-content">
+                <div class="row-explore">
+                    <h3 class="row-explore-heading"></h3>
+                    <p class="row-explore-description"></p>
+                    <p class="row-explore-brief"></p>
+                </div>
+                <img class="continent-map" src="" alt="Continent Map">
+            </div>
+            <img style="height: 25%; width: 80%; margin-bottom: 3%;" src="" alt="">
+            <div>
+                <button class="nextbutton" onclick="redirectToForm()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const continentData = {
+            'Asia': {
+                heading: 'Asia',
+                description: '48 Countries',
+                brief: 'Explore the diverse cultures and stunning landscapes of Asia.',
+                mapImage: './images/globe_page/maps/asia.png',
+                additionalImages: ['./images/globe_page/asia_1.png']
+            },
+            'Africa': {
+                heading: 'Africa',
+                description: '54 Countries',
+                brief: 'Discover the rich heritage and breathtaking natural beauty of Africa.',
+                mapImage: './images/globe_page/maps/africa.png',
+                additionalImages: ['./images/globe_page/africa_1.png' ]
+            },
+            'North America': {
+                heading: 'North America',
+                description: '23 Countries',
+                brief: 'Experience the diverse landscapes and vibrant cultures of North America.',
+                mapImage: './images/globe_page/maps/north_america.png',
+                additionalImages: ['./images/globe_page/north_1.png']
+            },
+            'South America': {
+                heading: 'South America',
+                description: '12 Countries',
+                brief: 'Immerse yourself in the rich history and stunning natural wonders of South America.',
+                mapImage: './images/globe_page/maps/south_america.png',
+                additionalImages: ['./images/globe_page/south_1.png']
+            },
+            'Antarctica': {
+                heading: 'Antarctica',
+                description: '7 Countries',
+                brief: 'Explore the unique and pristine landscapes of Antarctica.',
+                mapImage: './images/globe_page/maps/antarctica.png',
+                additionalImages: ['./images/globe_page/antar_1.png',]
+            },
+            'Europe': {
+                heading: 'Europe',
+                description: '44 Countries',
+                brief: 'Discover the rich history and stunning architecture of Europe.',
+                mapImage: './images/globe_page/maps/europe.png',
+                additionalImages: ['./images/globe_page/europe_1.png',]
+            },
+            'Australia': {
+                heading: 'Australia',
+                description: '14 Countries',
+                brief: 'Experience the unique wildlife and beautiful landscapes of Australia.',
+                mapImage: './images/globe_page/maps/australia.png',
+                additionalImages: ['./images/globe_page/australia_1.png', ]
+            }
+        };
+
+  
+    function rotateGlobeToContinent(continent) {
+        const headingElement = document.querySelector('.row-explore-heading');
+        const descriptionElement = document.querySelector('.row-explore-description');
+        const briefElement = document.querySelector('.row-explore-brief');
+        const continentMap = document.querySelector('.continent-map');
+        const additionalImages = document.querySelectorAll('.column-explore img');
+        const exploreColumn = document.querySelector('.column-explore');
+
+        headingElement.textContent = continentData[continent].heading;
+        descriptionElement.textContent = continentData[continent].description;
+        briefElement.textContent = continentData[continent].brief;
+        continentMap.src = continentData[continent].mapImage;
+
+        additionalImages[1].src = continentData[continent].additionalImages[0];
+       
+
+        exploreColumn.style.visibility = 'visible';
+
+        // Get the model-viewer element
+        const modelViewer = document.querySelector('#globe');
+        
+        // Smooth rotation parameters
+        modelViewer.interpolationDecay = 500; // Adjust for smoother transition (higher value = smoother but slower)
+
+        // // Reset the camera orbit before setting the new one
+        // modelViewer.cameraOrbit = '0deg 0deg '; // Reset to default view
+
+        // Allow reset to complete before applying new orbit
+        setTimeout(() => {
+            modelViewer.cameraOrbit = getCameraOrbit(continent);
+        }, 50); // Small delay to allow reset to take effect
+    }
+
+    function getCameraOrbit(continent) {
+        switch (continent) {
+            case 'Asia': return '65deg 70deg ';
+            case 'Africa': return '5deg 100deg ';
+            case 'North America': return '-100deg 4deg ';
+            case 'South America': return '-80deg 105deg ';
+            case 'Antarctica': return '0deg 350deg';
+            case 'Europe': return '20deg 50deg ';
+            case 'Australia': return '120deg 115deg ';
+            default: return '0deg 0deg ';
+        }
+    }
+
+  
+
+
+        function redirectToForm() {
+            window.location.href = "form.html";
+        }
+
+        // Event listener for the model-viewer load event
+        document.querySelector('#globe').addEventListener('load', () => {
+        document.getElementById('loader').classList.add('hidden');
+    });
+    </script>
+</body>
+
+</html>

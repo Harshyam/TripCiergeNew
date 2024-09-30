@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripcierge</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media-query.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+
+
+
+<body>
+    <section class="G" style="margin-top: 20px;">
+        <div class="container-fluide d">
+            <div class="bg-contact">
+                <h1>Get Closer with us</h1>
+                <button>Contact Us</button>
+            </div>
+        </div>
+        <div style="margin-top: 30px;" class="container d-md-none contact_main">
+            <div class="bg-contact1">
+                <h1>Get Closer with us</h1>
+            </div>
+            <button>Contact Us</button>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer d">
+            <div class="footer-content">
+                <div class="column" style="width: 35%; margin-right: 10%;">
+                    <img style="width: 40%;" src="./images/homePage/loggo2.png" alt="">
+                    <p style="width: 100%; color: #643600;">
+                        Our expert team crafts unforgettable journeys, from luxurious retreats to off-the-beaten-path
+                        explorations.
+                    </p>
+                    <div style="margin-left: 10px;" class="footer_icon d-flex align-items-center ">
+                        <!-- Facebook Image with Link -->
+                        <a href="https://www.facebook.com/profile.php?id=61564592445815" target="_blank">
+                            <img src="images/homePage/FB.png" alt="Facebook" class="i_icon i_iconf">
+                        </a>
+
+                        <!-- Instagram Image with Link -->
+                        <a href="https://www.instagram.com/tripcierge_?igsh=d3k4dmpzanRsMXQ3" target="_blank">
+                            <img src="images/homePage/instagram.png" alt="Instagram" class="i_icon i_icon1">
+                        </a>
+
+                        <img src="images/homePage/whatsapp.png" alt="" class="i_icon i_icon1" onclick="openWhatsAppChat()">
+
+                    </div>
+                </div>
+                <div class="column" style="width: 10%;">
+                    <h3 style="color: #643600;">Page</h3>
+                    <div style="color: #643600;">
+                        <span><a href="./index.html" class="text-decoration-none"
+                                style="color: #ffbb00 ;">Homepage</a></span>
+                        <span><a href="./aboutus.html" class="text-decoration-none"
+                                style="color: #ffbb00 ;">About</a></span>
+                        <span><a href="./destination.html" class="text-decoration-none"
+                                style="color: #ffbb00 ;">Destination</a></span>
+                        <span><a href="./blogVlog.html" class="text-decoration-none"
+                                style="color: #ffbb00 ;">Blog/Vlog</a></span>
+                        <span style="width: max-content;"><a href="./contactus.html" class="text-decoration-none"
+                                style="color: #ffbb00 ;">Contact Us</a></span>
+                    </div>
+                </div>
+                <div class="column" style="width: 20%;">
+                    <h3 style="color: #643600;">Plan Your Trip</h3>
+                    <div style="color: #643600;">
+                        <span><a href="./form.html" class="text-decoration-none" style="color: #ffbb00 ;">Fill the
+                                Details</a></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="color: #643600; font-size: 12px;" class="copyright">Copyright ©️ 2024 All Rights Reserved</div>
+        </div>
+
+        <div class="container d-md-none mt-5 footer2">
+            <div class="d-flex">
+                <img style="width: 200px;;" src="./images/homePage/loggo2.png" alt="">
+
+            </div>
+            <h6 style="color: #643600; font-size: 16px !important;">Experience personalized travel adventures tailored
+                to your unique desires.
+                Our expert team crafts unforgettable journeys, from luxurious retreats to
+                off-the-beaten-path explorations.</h6>
+
+            <div style="margin-left: 10px;" class="footer_icon d-flex align-items-center ">
+                <!-- Facebook Image with Link -->
+                <a href="https://www.facebook.com/profile.php?id=61564592445815" target="_blank">
+                    <img src="images/homePage/FB.png" alt="Facebook" class="i_icon i_iconf">
+                </a>
+
+                <!-- Instagram Image with Link -->
+                <a href="https://www.instagram.com/tripcierge_?igsh=d3k4dmpzanRsMXQ3" target="_blank">
+                    <img src="images/homePage/instagram.png" alt="Instagram" class="i_icon i_icon1">
+                </a>
+
+
+                <!-- WhatsApp Image with wa.me fuctionality-->
+                <img src="images/homePage/whatsapp.png" alt="WhatsApp" class="i_icon i_icon1"
+                    onclick="openWhatsAppChat()">
+
+                <script>
+                    function openWhatsAppChat() {
+                        var phoneNumber = "9825066890"; // The phone number you want to chat with
+                        var url = "https://wa.me/" + phoneNumber;
+                        window.open(url, "_blank");
+                    }
+                </script>
+
+            </div>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                            style="font-weight: bold; color: #643600;">
+                            Page
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div style="line-height: 2; color: #643600;" class="accordion-body d-flex  flex-column">
+                            <a href="./index.html" class="text-decoration-none" style="color: #ffbb00 ;">Homepage</a>
+                            <a href="./aboutus.html" class="text-decoration-none" style="color: #ffbb00 ;">About</a>
+                            <a href="./destination.html " class="text-decoration-none" style="color: #ffbb00 ;">
+                                Destination</a>
+                            <a href="./blogVlog.html" class="text-decoration-none"
+                                style="color: #ffbb00 ;">Blog/Vlog</a>
+                            <a href="./contactus.html" class="text-decoration-none" style="color: #ffbb00 ;"> Contact
+                                Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="font-weight: bold; color: #643600; ">
+                            Important Link
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div style="line-height: 2; color: #643600;" class="accordion-body">
+                            Privacy Policy<br/>
+                            Terms & Conditions
+                        </div>
+                    </div>
+                </div> -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree" style="font-weight: bold; color: #643600;">
+                            Plan Your Trip
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div style="line-height: 2; color: #643600;" class="accordion-body">
+                            <a href="./form.html" class="text-decoration-none" style="color: #ffbb00 ;"> Fill The
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 30px; margin-left:04%; color:#643600; font-size: 12px;" class="copyrightmobile">
+                Copyright ©️ 2024 All Rights Reserved</div>
+        </div>
+    </footer>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

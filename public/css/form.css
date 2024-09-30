@@ -1,0 +1,749 @@
+/* Background image styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+.bg_form {
+    background-image: url('../images/image17.png');
+    width: 100%;
+    height: 690px;
+    background-size: cover;
+    filter: brightness(.5);
+    margin-top: -125px;
+    position: relative;
+    z-index: 0;
+}
+
+.dest_head {
+    flex-direction: column;
+    line-height: 1.5cm;
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+}
+
+.des_logo {
+    color: #FFC700;
+}
+
+.dest_head h1 {
+    font-size: 55px;
+    font-weight: 900;
+    font-family: poppins;
+    color: white !important;
+}
+
+.dest_head button {
+    margin-top: 10px;
+    height: 50px;
+    width: 180px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 2px solid #9c9c9c40;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    backdrop-filter: blur(3px); 
+    background-color: transparent;/* Blurs the background */
+}
+.dest_head button:hover {
+    backdrop-filter: blur(8px);
+    background-color: #f1f1f120;
+    border-radius: 25px;
+    border: 2px solid #9c9c9c40;
+   
+}
+
+
+
+/* Media Queries */
+@media (max-width: 576px) {
+    .bg_form {
+        height: 600px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(0.8);
+    }
+
+
+    .dest_head {
+        text-align: center;
+    }
+
+    .dest_head h1 {
+        font-size: 32px !important;
+        width: 250px !important;
+        text-align: start;
+       
+    }
+
+    .dest_head button {
+        height: max-content;
+        width: 160px;
+        font-size: 15px;
+        padding: 6px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 210px !important;
+        left: 48% ;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
+
+    }
+
+   
+}
+
+@media (max-width: 475px) {
+    .dest_head h1 {
+        font-size: 35px;
+    }
+
+    .dest_head button {
+        height: max-content;
+        width: 160px;
+        font-size: 15px;
+        padding: 6px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 210px !important;
+        left: 48% ;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
+
+    }
+}
+
+@media (max-width: 425px) {
+    .dest_head h1 {
+        font-size: 30px;
+    }
+
+    .dest_head button {
+        height: max-content;
+        width: 160px;
+        font-size: 15px;
+        padding: 6px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 210px !important;
+        left: 48% ;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
+
+    }
+}
+
+@media (max-width: 375px) {
+    .dest_head h1 {
+        font-size: 30px;
+    }
+
+    .dest_head button {
+        height: max-content;
+        width: 160px;
+        font-size: 15px;
+        padding: 6px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 210px !important;
+        left: 48% ;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
+
+    }
+}
+
+@media (max-width: 320px) {
+    .dest_head h1 {
+        font-size: 30px;
+    }
+
+    .dest_head button {
+        height: max-content;
+        width: 160px;
+        font-size: 15px;
+        padding: 6px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 210px !important;
+        left: 48% ;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
+
+    }
+}
+
+/* Common styles for all section headings */
+/* General styles */
+.section-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}
+
+.form-section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #643600;
+    font-family: poppins;
+}
+
+.frm_sub_titile {
+    color: #643600;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.check-icon {
+    color: #009578;
+    font-size: 20px;
+}
+
+.form_day:focus,
+.form_day1:focus,
+.frm_adults:focus,
+.frm_adults1:focus,
+.budget-slider:focus,
+#budget-value:focus {
+    border: 1px solid #643600; /* Border color on focus */
+    background-color: transparent; /* No background color change */
+}
+
+/* Base styles */
+.form-section1 {
+    margin: 100px !important;
+}
+
+.form-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.form-details {
+    width: 500px !important;
+    height: 50px;
+}
+.frm_desti{
+    height: 50px !important;
+}
+.form-control {
+    border: 1px solid #FFC700 !important;
+
+}
+
+.budget-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #D6B957 0%, #D6B957 0%, #ddd 0%, #ddd 100%);
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+    border: none;
+}
+
+.budget-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #D6B957;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.budget-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #D6B957;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none; /* Ensures no border on the thumb */
+}
+
+.budget-slider::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #D6B957;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none; /* Ensures no border on the thumb */
+}
+
+
+#budget-value {
+    font-size: 16px;
+    color: #D8B964;
+    /* border: 2px solid #D8B964; */
+    margin-top: 30px !important;
+    /* background: #6a4517; */
+    border: none;
+}
+
+.traveler-group {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.traveler-group:last-child {
+    margin-right: 0;
+}
+
+.traveler-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #D8B964;
+    border-radius: 0;
+}
+
+.btn-custom {
+    background-color: white;
+    color: #D8B964;
+    border: 1px solid #D8B964;
+    border-radius: 0;
+    font-size: 18px;
+    width: 40px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #D8B964;
+    color: white;
+}
+
+.plan_button {
+    display: flex;
+    justify-content: center;
+}
+
+.plan_button button {
+    width: 350px;
+    height: 40px;
+    border: 2px solid #D8B964;
+    border-radius: 2px;
+}
+.plan_button button div span{
+    font-size: 22px ;
+    font-weight: bold;
+    font-family: poppins;
+    color: #6a4517;
+    margin-left: 70px
+    /* text-align: center !important; */
+}
+.plan_button button img {
+    width: 45px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.calendar-container {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 370px !important;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #FFC700;
+    width: 360px !important;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.calendar-header button {
+    border: none;
+    background: none;
+    color: #d4af37;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calendar-header button:focus {
+    outline: none;
+}
+
+#calendar-month-year {
+    font-weight: bold;
+    color: #6a4517;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; /* Adjust the gap between days */
+}
+
+.calendar-day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.calendar-day.selected {
+    background-color: #D6B957; 
+    color: #fff;
+}
+
+.calendar-day.selected-range {
+    background-color: #D6B957; 
+    color: #fff;
+}
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+.frm_adultsmain {
+    border: 1px solid #FFC700;
+    border-radius: 5px;
+    width: 265px !important;
+
+
+}
+.frm_adultsmain button{
+    font-size: 25px;
+    /* font-weight: bold; */
+    font-family: poppins;
+
+}
+.frm_adultsmain1 {
+    margin-left: 25px;
+}
+
+.frm_adults {
+    border: none !important;
+    text-align: center !important;
+    border-radius: 15px !important;
+    
+}
+
+.form_day {
+    width: 265px !important;
+    height: 50px;
+}
+
+.frm_desti{
+    /* width: 100%; */
+}
+.frm_days {
+    margin-top: 6px;
+}
+
+.form_day1 {
+    margin-left: 10px;
+}
+
+.frm_profile {
+    width: 596px !important;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* 576px and below */
+@media (max-width: 576px) {
+    .form-section1 {
+        margin: 50px !important;
+    }
+
+    .form-section-title {
+        font-size: 1rem;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .calendar-container {
+        width: 100% !important;
+    }
+
+    .calendar-header {
+        width: 100% !important;
+    }
+    .calendar-days {
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+}
+
+/* 430px and below */
+@media (max-width: 430px) {
+    .form_day {
+        width: 250px !important;
+    }
+
+    .frm_profile {
+        width: 100% !important;
+    }
+    .calendar-days {
+        gap: 8px; /* Further reduced gap */
+    }
+}
+
+/* 425px and below */
+@media (max-width: 425px) {
+    .form_day {
+        width: 240px !important;
+    }
+
+    .plan_button button {
+        width: 250px;
+        height: 35px;
+    }
+    .calendar-days {
+        gap: 6px; /* More reduction */
+    }
+}
+
+/* 420px and below */
+@media (max-width: 420px) {
+    .calendar-container {
+        width: 100% !important;
+    }
+
+    .calendar-header {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 320px !important;
+    }
+
+    .btn-custom {
+        font-size: 16px;
+        width: 35px;
+        height: 30px;
+    }
+    .calendar-days {
+        gap: 5px; /* Slightly smaller gap */
+    }
+}
+
+/* 375px and below */
+@media (max-width: 375px) {
+    .form_day {
+        width: 200px !important;
+    }
+
+    .plan_button button {
+        width: 220px;
+        height: 30px;
+    }
+    .calendar-days {
+        gap: 4px; /* Minimum gap for very small screens */
+    }
+    .btn-custom {
+        font-size: 14px;
+        width: 30px;
+        height: 25px;
+    }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+    .form_day {
+        width: 180px !important;
+    }
+
+    .plan_button button {
+        width: 200px;
+        height: 30px;
+    }
+    .calendar-days {
+        gap: 3px; /* Smallest gap for the smallest screens */
+    }
+    .btn-custom {
+        font-size: 12px;
+        width: 25px;
+        height: 20px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .form-section1 {
+        margin: 50px !important;
+    }
+    .frm_profile{
+        width: 300px !important;
+    }
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .det_text {
+        width: 380px;
+    }
+}
+
+@media (max-width: 425px) {
+    .form-section1 {
+        margin: 25px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .plan_button button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .form-section1 {
+        margin: 15px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .plan_button button {
+        width: 100%;
+    }
+
+    .det_text {
+        width: 280px;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-section1 {
+        margin: 10px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .plan_button button {
+        width: 100%;
+    }
+}
+
+/* Changing form direction for smaller screens */
+@media (max-width: 576px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100%;
+    }
+}
