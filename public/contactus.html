@@ -114,10 +114,8 @@
 
             fetch("https://tripcierge.onrender.com/contact-details", {
               method: "POST",
-               headers: {
-            "Content-Type": "application/json", // Set the content type to JSON
-        },
-        body: JSON.stringify(formData),
+              
+        body: formData,
             })
               .then((response) => {
                 if (response.ok) {
