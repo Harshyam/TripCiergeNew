@@ -10,61 +10,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        .bg-aboutimg {
-            background-image: url('images/blogPage/blogbanner.png');
+        .bg-blogimg {
+            background-image: url('../images/blogPage/blogbanner.png');
             width: 100%;
             height: 780px;
             background-size: cover;
             margin-top: -180px;
             display: flex;
             align-items: center;
-            
-        }
-            .navbar-brand img {
-            width:160px;
-            padding-left: 8px;
-            padding-right: 8px;
-            padding-bottom: 8px;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            cursor: pointer; 
-            border-radius: 5px;
-            /* transition: background-color 0.3s ease;
-            backdrop-filter: blur(3px); 
-            background-color: #54535350; */
-        }
-        firstButton{
-            text-align: center;
-            font-size: 22px;
-            font-weight: 400;
-            
+            /* margin-top: -120px; */
         }
 
-        .about-box , button{
+        .blog-box {
             margin-top: 10px;
             height: 50px;
-            width: 320px;
-            background-color: transparent;
-            border: 1.5px solid #dddddd50;
+            width: 250px;
             color: white;
-            border-radius: 30px;
+            padding-top: 5px;
             display: flex;
             justify-content: center;
             text-align: center;
             align-items: center;
+            border-radius: 25px;
+            border: 2px solid #9c9c9c40;
+            transition: background-color 0.3s ease;
+            /* Smooth transition for background color */
+            backdrop-filter: blur(3px);
+            background-color: transparent;
+            /* Blurs the background */
 
         }
-         button{
-            margin-top: 20px;
+
+
+        .blog-box:hover {
+            backdrop-filter: blur(8px);
+            background-color: #f1f1f120;
+
+        }
+
+        .blog button {
+            margin-top: 10px;
             height: 50px;
-            width: 220px;
-         }
+            width: 180px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 25px;
+            border: 2px solid #9c9c9c40;
+            transition: background-color 0.3s ease;
+            /* Smooth transition for background color */
+            backdrop-filter: blur(3px);
+            background-color: transparent;
+            /* Blurs the background */
+        }
+
+        .blog button a {
+            color: #ffff;
+            text-decoration: none;
+        }
+
+        .blog button:hover {
+            backdrop-filter: blur(8px);
+            background-color: #f1f1f120;
+
+        }
+
         .blogPage {
             margin-top: 40px;
         }
-        
+
         .blogPage img {
             width: 400px;
             height: 400px;
@@ -73,13 +90,16 @@
         .ctnrSection2 {
             margin-top: 0px;
         }
-        .blogPage p{
+
+        .blogPage p {
             color: black;
         }
-        .h1Span{
+
+        .h1Span {
             color: #FFC700;
         }
-         h1{
+
+        h1 {
             margin-top: 20px;
             font-size: 50px;
             font-weight: 700;
@@ -87,59 +107,43 @@
             letter-spacing: 1.5px;
             font-family: 'Khand', sans-serif;
         }
-        .navbar {
-            position: relative;
-        }
 
-        .nav-bg {
-            background-color: transparent;
-            -webkit-blend-mode: overlay;
-            border: none !important;
-        }
 
-        .navbar-toggler {
-            background-color: transparent;
-            border: none !important;
-        }
-        
 
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
 
-        .btn-close {
-           display: none !important;
-            
-        }
-
-        .btn-close:focus,
-        .btn-close:hover {
-            background-color: #e64a19;
-        }
-
-        .hedbox {
-            border: 2px solid #f1f1f1;
-            height: 60px;
-            width: 250px;
-            font-size: 22px;
-            background: linear-gradient(90deg, rgba(65, 65, 66, 0.1) 0%, rgba(44, 44, 45, 0.8) 35%, rgba(65, 65, 66, 0.8) 100%);
-            margin-top: 15px;
-            text-align: center;
-            border-radius: 30px;
-            mix-blend-mode: multiply;
-
-        }
-        h4{
+        h4 {
             margin-top: 16px;
             margin-bottom: 06px;
         }
-        .containeri, .containerii{
+
+        .containeri,
+        .containerii {
             display: none;
         }
-       
-    
 
+        /* .blog button {
+            margin-top: 10px;
+            height: 50px;
+            width: 180px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 25px;
+            border: 2px solid #9c9c9c40;
+            transition: background-color 0.3s ease;
+         
+            backdrop-filter: blur(3px);
+            background-color: transparent;
+           
+        }
 
+        .blog button a {
+            color: #ffff;
+            text-decoration: none;
+        } */
 
 
         @media (max-width: 576px) {
@@ -147,23 +151,31 @@
                 flex: 50%;
                 max-width: 50%;
             }
-            h4{
+
+            /* h4 {
                 display: none;
-            }
-            p{
+            } */
+
+            /* p {
                 display: none;
-            }
-            .containeri, .containerii{
-                display: block;
-            }
+            } */
 
 
-            .container1 img, .containeri img,.container4 img, .containerii img{
-                border-radius:  25px 25px 0 0;
+
+
+            .container1 img,
+            .containeri img,
+            .container4 img,
+            .containerii img {
+                border-radius: 25px 25px 0 0;
                 width: 100%;
                 height: 185px;
             }
-            .container1, .containeri,.container4, .containerii{
+
+            .container1,
+            .containeri,
+            .container4,
+            .containerii {
                 width: 100%;
                 height: 270px;
                 background-color: white;
@@ -171,41 +183,92 @@
                 box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.3);
             }
 
-            .container2 img,.container3 img, .container5 img, .container6 img {
-                border-radius:  25px 25px 0 0;
+            .container2 img,
+            .container3 img,
+            .container5 img,
+            .container6 img {
+                border-radius: 25px 25px 0 0;
                 width: 100%;
                 height: 140px;
             }
-            .container2, .container3, .container5, .container6{
+
+            .container2,
+            .container3,
+            .container5,
+            .container6 {
                 width: 100%;
                 height: 225px;
-                background-color:white;
+                background-color: white;
                 border-radius: 25px;
                 box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.3);
             }
 
-            .container3, .container6{
+            .container1,
+            .container2,
+            .container3,
+            .container4,
+            .container5,
+            .container6 {
                 margin-top: 20px;
+
             }
-            .containeri, .containerii{
-                margin-top: -25px;
-            }
-            .container4, .container5{
-                margin-top: -25px;
+
+            .destop {
+                display: none;
             }
 
         }
-    
+
+        .blog_box1 {
+            width: 145px;
+            height: 295px;
+            background-color: rgb(240, 237, 237);
+            border-radius: 25px;
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog_box2 {
+            width: 145px;
+            height: 260px;
+            background-color: rgb(240, 237, 237);
+            border-radius: 25px;
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog_box1 img {
+            width: 145px;
+            height: 180px;
+            border-radius: 25px 25px 0 0;
+            position: relative;
+
+
+
+        }
+
+        .blog_box2 img {
+            width: 145px;
+            height: 160px;
+            border-radius: 25px 25px 0 0;
+
+        }
+
+        .mobile_ui h2 {
+            display: flex;
+            justify-content: center;
+            color: #643600dd;
+            font-weight: bold;
+
+        }
     </style>
 </head>
 
 <body>
-   
+
     <div id="header-placeholder"></div>
 
-    <section>
+    <!-- <section>
         <div class="container-fluid bg-aboutimg">
-            <div class="container ">
+            <div class="container blog">
                 <div class="about-box ">
                     <firstButton>Blog & Vlog By Travelers</firstButton>
                 </div>
@@ -214,92 +277,265 @@
                     Dream Destination
                     with <span class="h1Span">TRIPCIERGE!</span>
                 </h1>
-                <button> <firstButton> Let's Plan Now</firstButton></button>
+                <button><a href="./form.html"> Let's Plan Now</a></button>
+            </div>
+        </div>
+    </section> -->
+
+    <section>
+        <div class="container-fluid bg-blogimg">
+            <div class="container blog">
+                <div class="blog-box ">
+                    <h5>Blog & Vlog By Travelers</h5>
+                </div>
+                <h1 style="width: 30%; color:#f1f1f1;">
+                    Design your Bespoke
+                    Dream Destination
+                    with <span style="color: #FFC700;"> TRIPCIERGE!</span>
+                </h1>
+                <button><a href="./form.html">Let's Plan Now</a></button>
+
             </div>
         </div>
     </section>
-   
 
-
-    <section>
+    <section class="destop">
         <div class="container ctnrSection2">
-            <div class="row blogPage">
-                <div class="col-md-4 col-sm-6">
-                    <div class="container1">
+            <div class="row blogPage ">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="container1 ">
                         <img src="images/blogPage/Rectangle111.png" alt="abcd">
                         <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Baku (Azerbaijan)</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> 
-                            Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian Sea beauty.
+                        <p style="font-size: 15px; color: #643600dd;">
+                            Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian
+                            Sea beauty.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="container2">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="container2 ">
                         <img src="images/blogPage/Rectangle112.png" alt="abcd">
                         <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Sahara (Africa)</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> 
+                        <p style="font-size: 15px; color: #643600dd;">
                             Embark on an epic desert adventure. Your gateway to the sands of time.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="container3">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="container3 ">
                         <img src="images/blogPage/Rectangle113.png" alt="abcd">
                         <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Bali (Indonesia)</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> 
+                        <p style="font-size: 15px; color: #643600dd;">
                             Paradise found. Pristine beaches, lush jungles, vibrant culture, and warm hospitality await.
-                        </p>
-                    </div>       
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="containeri">
-                        <img src="images/blogPage/Rectangle113.png" alt="abcd">
-                        <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Karnataka (Southwestern India)</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    </div>       
-                </div>
-            </div>
-            <div class="row blogPage">
-                <div class="col-md-4 col-sm-6">
-                    <div class="container4">
-                        <img src="images/blogPage/Rectangle114.png" alt="abcd">
-                        <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Karnataka (Southwestern India)</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> 
-                            A tapestry of history, nature, and vibrant cities. Explore ancient temples, lush hill stations, and coastal bliss.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="container5">
+
+            </div>
+            <div class="row blogPage">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="container4 ">
+                        <img src="images/blogPage/Rectangle114.png" alt="abcd">
+
+                        <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Karnataka (Southwestern India)
+                        </h4>
+                        <p style="font-size: 15px; color: #643600dd;">
+                            A tapestry of history, nature, and vibrant cities. Explore ancient temples, lush hill
+                            stations, and coastal bliss.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6  ">
+                    <div class="container5 ">
                         <img src="images/blogPage/Rectangle115.png" alt="abcd">
                         <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Mahabaleshwar (Bombay)</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> 
+                        <p style="font-size: 15px; color: #643600dd;">
                             Escape to the hills. Fresh air, stunning views, and tranquil getaways await.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="container6">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="container6 ">
                         <img src="images/blogPage/Rectangle116.png" alt="abcd">
                         <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">Sri Lanka</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> 
-                            An island paradise with golden beaches, ancient ruins, and vibrant wildlife. Experience the island's magic.
-                            </p>
-                    </div>     
+                        <p style="font-size: 15px; color: #643600dd;">
+                            An island paradise with golden beaches, ancient ruins, and vibrant wildlife. Experience the
+                            island's magic.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="containerii">
-                        <img src="images/blogPage/Rectangle116.png" alt="abcd">
-                        <h4 style="color: #643600; font-weight:600; letter-spacing: 1px;">simply dummy text of the printing and typesetting industry.</h4>
-                        <p style="font-size: 15px; color: #643600dd;"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    </div>     
-                </div>
+
             </div>
         </div>
     </section>
-    
+    <!-- mobile ui -->
+    <section class="d-md-none mt-5  mobile_ui">
+        <h2>Destination Diaries</h2>
+        <div class="mt-5">
+            <div class="d-flex justify-content-evenly">
+
+                <div class="blog_box1">
+                    <figure style="position: relative; display: inline-block;">
+                        <img src="images/blogPage/Rectangle111.png" alt="abcd" style="width: 100%;">
+                        <figcaption
+                            style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                            Dubai
+                        </figcaption>
+                    </figure>
+                    <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                        Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian Sea
+                        beauty.<br>
+                        <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                            Bishnoi</span>
+                    </p>
+                </div>
+
+
+
+                <div class="blog_box2 ">
+                    <figure style="position: relative; display: inline-block;">
+                        <img src="images/blogPage/Rectangle112.png" alt="abcd" style="width: 100%;">
+                        <figcaption
+                            style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                            Dubai
+                        </figcaption>
+                    </figure>
+                    <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                        Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian Sea
+                        beauty.<br>
+                        <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                            Bishnoi</span>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="d-flex justify-content-evenly mt-3">
+
+                    <div class="blog_box2 ">
+                        <figure style="position: relative; display: inline-block;">
+                            <img src="images/blogPage/Rectangle113.png" alt="abcd" style="width: 100%;">
+                            <figcaption
+                                style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                                Dubai
+                            </figcaption>
+                        </figure>
+                        <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                            Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian
+                            Sea beauty.<br>
+                            <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                                Bishnoi</span>
+                        </p>
+                    </div>
+
+
+
+                    <div class="blog_box1 " style="margin-top:-35px">
+                        <figure style="position: relative; display: inline-block;">
+                            <img src="images/blogPage/Rectangle114.png" alt="abcd" style="width: 100%;">
+                            <figcaption
+                                style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                                Dubai
+                            </figcaption>
+                        </figure>
+                        <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                            Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian
+                            Sea beauty.<br>
+                            <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                                Bishnoi</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="d-flex justify-content-evenly mt-3">
+
+                    <div class="blog_box1">
+                        <figure style="position: relative; display: inline-block;">
+                            <img src="images/blogPage/Rectangle115.png" alt="abcd" style="width: 100%;">
+                            <figcaption
+                                style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                                Dubai
+                            </figcaption>
+                        </figure>
+                        <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                            Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian
+                            Sea beauty.<br>
+                            <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                                Bishnoi</span>
+                        </p>
+                    </div>
+
+
+                    <div class="blog_box2 ">
+                        <figure style="position: relative; display: inline-block;">
+                            <img src="images/blogPage/Rectangle116.png" alt="abcd" style="width: 100%;">
+                            <figcaption
+                                style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                                Dubai
+                            </figcaption>
+                        </figure>
+                        <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                            Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian
+                            Sea beauty.<br>
+                            <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                                Bishnoi</span>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="d-flex justify-content-evenly mt-3">
+
+                <div class="blog_box2 ">
+                    <figure style="position: relative; display: inline-block;">
+                        <img src="images/blogPage/Rectangle111.png" alt="abcd" style="width: 100%;">
+                        <figcaption
+                            style="position: absolute; bottom: 10px; left: 10px; color: white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                            Dubai
+                        </figcaption>
+                    </figure>
+                    <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                        Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian Sea
+                        beauty.<br>
+                        <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                            Bishnoi</span>
+                    </p>
+                </div>
+
+                <div class="blog_box1" style="margin-top:-35px">
+                    <figure style="position: relative; display: inline-block;">
+                        <img src="images/blogPage/Rectangle111.png" alt="abcd" style="width: 100%;">
+                        <figcaption
+                            style="position: absolute; bottom: 10px; left: 10px; color:white; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 5px;">
+                            Dubai
+                        </figcaption>
+                    </figure>
+                    <p style="font-size: 10px; padding:0 2% 0 2%; color: #643600dd;">
+                        Where ancient charm meets modern allure. A vibrant tapestry of history, culture, and Caspian Sea
+                        beauty.<br>
+                        <span style="font-size: 12px;font-weight: bold;margin-top: -4%;  color: #643600dd;">Janki
+                            Bishnoi</span>
+                    </p>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
     <script src="../js/header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
