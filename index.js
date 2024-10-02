@@ -114,8 +114,13 @@ app.post("/contact-details", (req, res) => {
       from: email,
       to: "cyphercodee@gmail.com", // Set recipient email directly for contactUs Inquiry
       subject: "Inquiry",
-      text: `Name : ${firstName}\n
-      Inquiry: ${additionalInfo}`
+     text: `
+        You have received a new inquiry:
+        Name: ${firstName} ${firstName2}
+        Email: ${email}
+        Additional Information:
+        ${additionalInfo}
+      `,
     }
     transporter.sendMail(mailOptions);
     // res.redirect("/");
