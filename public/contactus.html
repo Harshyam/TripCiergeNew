@@ -64,6 +64,11 @@
                                     <input type="email" class="form-control form-details" name="email"
                                         placeholder="E-Mail ID" required>
                                 </div>
+                                <div class="form-group1 col-md-6 contact_txt1">
+                                    <input type="text" class="form-control form-details" name="firstName2"
+                                        placeholder="First Name2" required>
+                                </div>
+
                             </div>
 
                             <div class="form-section  form-section1 ">
@@ -108,16 +113,17 @@
                 const formData = {
         firstName: document.querySelector('input[name="firstName"]').value,
         email: document.querySelector('input[name="email"]').value,
+        firstName2: document.querySelector('input[name="firstName2"]').value,
         additionalInfo: document.querySelector('textarea[name="additionalInfo"]').value,
     };
 
 
-            fetch('https://tripcierge.in/contact-details', {
+            fetch("https://tripciergenew.onrender.com/contact-details", {
               method: "POST",
-             headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData),
+               headers: {
+            "Content-Type": "application/json", // Set the content type to JSON
+        },
+        body: JSON.stringify(formData),
             })
               .then((response) => {
                 if (response.ok) {
