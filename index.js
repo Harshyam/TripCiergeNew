@@ -85,7 +85,7 @@ app.post("/send-email", (req, res) => {
 
     const mailOptions = {
       from: email,
-      to: "cyphercodee@gmail.com", // Set recipient email directly
+      to: "disha@tripcierge.in", // Set recipient email directly
       subject: "Travel Inquiry",
       text: `Name: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\nDestination: ${destination}\n Start Date:${startDate}\n End Date: ${endDate}\n Days: ${days}\nNights: ${nights}\nAdults: ${adults}\nChildren: ${children}\nBudget: ${budget}\nAdditional Information: ${additionalInfo}`,
     };
@@ -112,7 +112,7 @@ app.post("/contact-details", (req, res) => {
     }
     const mailOptions = {
       from: email,
-      to: "cyphercodee@gmail.com", // Set recipient email directly for contactUs Inquiry
+      to: "disha@tripcierge.in", // Set recipient email directly for contactUs Inquiry
       subject: "Inquiry",
      text: `
         You have received a new inquiry:
