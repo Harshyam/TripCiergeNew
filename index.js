@@ -85,7 +85,7 @@ app.post("/send-email", (req, res) => {
 
     const mailOptions = {
       from: email,
-      to: "disha@tripcierge.in", // Set recipient email directly
+      to: "cyphercodee@gmail.com", // Set recipient email directly
       subject: "Travel Inquiry",
       text: `Name: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\nDestination: ${destination}\n Start Date:${startDate}\n End Date: ${endDate}\n Days: ${days}\nNights: ${nights}\nAdults: ${adults}\nChildren: ${children}\nBudget: ${budget}\nAdditional Information: ${additionalInfo}`,
     };
@@ -112,16 +112,10 @@ app.post("/contact-details", (req, res) => {
     }
     const mailOptions = {
       from: email,
-      to: "cyphercodee@gmail.com", // Set recipient email directly for contactUs Inquiry
-      // to: "nandinijani2701@gmail.com",
+      to: "harubhagohil1@gmail.com", // Set recipient email directly for contactUs Inquiry
       subject: "Inquiry",
-     text: `
-        You have received a new inquiry:
-        Name: ${firstName} ${firstName2}
-        Email: ${email}
-        Additional Information:
-        ${additionalInfo}
-      `,
+      text: `Name : ${firstName}\n
+      Inquiry: ${additionalInfo}`
     }
     transporter.sendMail(mailOptions);
     // res.redirect("/");
