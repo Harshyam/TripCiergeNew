@@ -112,8 +112,8 @@ app.post("/contact-details", (req, res) => {
     }
     const mailOptions = {
       from: email,
-      // to: "disha@tripcierge.in", // Set recipient email directly for contactUs Inquiry
-      to: "nandinijani2701@gmail.com",
+      to: "cyphercodee@gmail.com", // Set recipient email directly for contactUs Inquiry
+      // to: "nandinijani2701@gmail.com",
       subject: "Inquiry",
      text: `
         You have received a new inquiry:
